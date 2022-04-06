@@ -6,7 +6,7 @@ import ifullyCustomizable from "../assets/images/icon-fully-customizable.svg";
 
 function Home() {
   return (
-    <article className="py-10 px-20">
+    <article className="pt-10 px-20">
       <header className="flex gap-10 items-center">
         <div>
           <h1 className="font-bold text-7xl text-dark-blue">
