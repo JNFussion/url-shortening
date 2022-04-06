@@ -10,7 +10,9 @@ function Home() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    setLinkList(JSON.parse(localStorage.getItem("linkList")));
+    if (localStorage.getItem("linkList")) {
+      setLinkList(JSON.parse(localStorage.getItem("linkList")));
+    }
 
     return () => {};
   }, []);
