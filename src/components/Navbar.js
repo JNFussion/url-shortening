@@ -3,8 +3,8 @@ import Logo from "../assets/images/logo.svg";
 
 function Navbar() {
   return (
-    <nav className="flex justify-between py-10 px-20">
-      <div className="flex gap-10">
+    <nav className="md:flex justify-between py-10 px-10 md:px-20">
+      <div className="md:flex gap-10">
         <div>
           <img src={Logo} alt="logo" />
         </div>

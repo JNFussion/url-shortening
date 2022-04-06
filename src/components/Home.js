@@ -49,13 +49,13 @@ function Home() {
   }
 
   return (
-    <article className="pt-10 px-20">
-      <header className="flex gap-10 items-center">
-        <div>
-          <h1 className="font-bold text-7xl text-dark-blue">
+    <article className="pt-10">
+      <header className="flex flex-wrap-reverse gap-10 items-center px-10 md:px-20">
+        <div className="flex-1">
+          <h1 className="font-bold text-4xl md:text-7xl text-dark-blue">
             More than just shorter links
           </h1>
-          <p className="my-5 text-grayish-violet text-xl">
+          <p className="my-5 text-grayish-violet md:text-xl">
             Build your brand's recognition and get detailed <br /> insights on
             how your links are performing.
           </p>
@@ -73,22 +73,24 @@ function Home() {
         <form
           action=""
           onSubmit={handleSubmit}
-          className=" p-10 rounded bg-dark-violet md:bg-shorten bg-shorten-mobile bg-cover "
+          className="mx-5 md:mx-20 p-10 rounded bg-dark-violet md:bg-shorten bg-shorten-mobile bg-cover "
         >
-          <div className="flex gap-10">
-            <input
-              type="url"
-              placeholder="Shorten a link here..."
-              name="fullLink"
-              className="flex-1 rounded px-4"
-            />
+          <div className="md:flex grid flex-wrap gap-2 md:gap-10">
+            <div className="flex-1">
+              <input
+                type="url"
+                placeholder="Shorten a link here..."
+                name="fullLink"
+                className="w-full h-full rounded px-4"
+              />
+            </div>
             <button type="submit" className="btn rounded">
               Shorten It!
             </button>
           </div>
           <p className="block my-2 text-red text-sm">{error}</p>
         </form>
-        <div className="p-10 bg-[hsl(0,0%,90%)]">
+        <div className="md:p-10 p-4 bg-[hsl(0,0%,90%)]">
           {linkList.map((link) => (
             <Link fullURL={link.fullURL} shortURL={link.shortURL} />
           ))}
@@ -102,8 +104,8 @@ function Home() {
           Track how your links are performing across the web with <br /> our
           advanced statistics dashboard.
         </p>
-        <div className="flex items-start gap-10 p-10">
-          <article className="relative p-4 rounded bg-white">
+        <div className="flex flex-wrap items-start gap-10 p-10">
+          <article className="md:flex-1 relative p-4 rounded bg-white">
             <div className="absolute top-[-38px] left-5 w-fit rounded-full bg-dark-violet">
               <img
                 src={iBrandRecognition}
@@ -120,7 +122,7 @@ function Home() {
               content.
             </p>
           </article>
-          <article className="my-10 relative p-4 rounded bg-white">
+          <article className="md:flex-1 my-10 relative p-4 rounded bg-white">
             <div className="absolute top-[-38px] w-fit rounded-full bg-dark-violet">
               <img
                 src={iDetailedRecords}
@@ -137,7 +139,7 @@ function Home() {
               decisions.
             </p>
           </article>
-          <article className="my-20 relative p-4 rounded bg-white">
+          <article className="md:flex-1 my-20 relative p-4 rounded bg-white">
             <div className="absolute top-[-38px] w-fit rounded-full bg-dark-violet">
               <img
                 src={ifullyCustomizable}

@@ -7,11 +7,11 @@ import iInstagram from "../assets/images/icon-instagram.svg";
 
 function Footer() {
   return (
-    <footer className="flex justify-between mx-20 px-20 py-10 text-white bg-very-dark-violet">
+    <footer className="flex flex-wrap justify-between  px-20 py-10 text-white bg-very-dark-violet">
       <div>
         <img src={Logo} alt="logo" />
       </div>
-      <div className="flex gap-10">
+      <div className="flex flex-wrap gap-10">
         <section>
           <h4 className="my-2 font-bold">Features</h4>
           <ul className="text-grayish-violet">
